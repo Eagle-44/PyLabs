@@ -11,7 +11,7 @@ class Companies(Enum):
 class WoodworkingMachine:
 
     def __init__(self, name="", model="", price=0.0, power=0, manufacture_company: Companies = None, rpm=0,
-                 volume_per_sec=0):
+                 volume_per_sec=0, purpose: str = ""):
         self.name = name
         self.model = model
         self.price = price
@@ -19,6 +19,7 @@ class WoodworkingMachine:
         self.power = power
         self.rpm = rpm
         self.volume_per_sec = volume_per_sec
+        self.purpose = purpose
 
     def __del__(self):
         pass
