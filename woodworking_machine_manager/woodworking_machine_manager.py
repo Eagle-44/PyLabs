@@ -18,8 +18,6 @@ class WoodworkingMachineManager:
     def get_workbench(self, index=0):
         return self.workbenches[index]
 
-    def find_by_name_company(self,company_name:Companies, purpose: str = ""):
-         for i in self.workbenches:
-             if company_name==i.manufacture_company and purpose==i.purpose:
-                 print(i)
+    def find(self, key, workbanches: list[WoodworkingMachine] = None):
+        return filter(key, workbanches if workbanches else self.workbenches)
 
